@@ -32,6 +32,8 @@ public class Account implements Serializable{
         return balance;
     }
 
+    public ReentrantLock getLock() { return lock; }
+
     public void deposit(BigDecimal amount){
         synchronized (this){
             balance = balance.add(amount);
