@@ -32,7 +32,7 @@ public class Account implements Serializable{
         return balance;
     }
 
-    public void deposite(BigDecimal amount){
+    public void deposit(BigDecimal amount){
         synchronized (this){
             balance = balance.add(amount);
         }
